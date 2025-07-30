@@ -42,10 +42,10 @@ if vb_input in input_devices:
 if vb_output in output_devices:
     output_var.set(vb_output)
 
-tk.Label(root, text="🎚 Pilih Output Device:").pack()
+tk.Label(root, text="🎚 Select Output Device:").pack()
 tk.OptionMenu(root, output_var, *output_devices).pack()
 
-tk.Label(root, text="🎚 Pilih Input Device:").pack()
+tk.Label(root, text="🎚 Select Input Device:").pack()
 tk.OptionMenu(root, input_var, *input_devices).pack()
 
 output_label = tk.Label(root, text=f"[OUTPUT] {output_var.get()}", fg="blue")
@@ -109,7 +109,7 @@ def play_audio(index):
         ),
         None
     )
-    print(f"[Monitor] Menggunakan device: {device_list[monitor_index]['name']} (index {monitor_index})")
+    print(f"[Monitor] Using device: {device_list[monitor_index]['name']} (index {monitor_index})")
 
     def callback(outdata, frames, time, status):
         nonlocal index
